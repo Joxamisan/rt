@@ -1,0 +1,430 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #6a5471;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    background-color: #5e4412;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    font-family: fantasy;
+    color:#fff;
+}
+
+
+header nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    padding: 20px 0;
+}
+
+main h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.main p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Основные стили */
+
+/* Стили для заголовков */
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #8B4513; /* коричневый цвет */
+    margin-bottom: 10px;
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Стили для списка ссылок в навигации */
+nav ul {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #8B4513;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease; /* добавляем плавный переход */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #CD853F; /* изменяем цвет при наведении */
+}
+.gallery {
+    margin-top: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-item {
+    width: calc(33.33% - 20px); /* 3 колонки на широких экранах */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный черный фон */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* текст изначально скрыт */
+    transition: opacity 0.3s ease; /* плавное появление текста */
+    border-radius: 5px;
+}
+
+.image-item:hover .image-overlay {
+    opacity: 1; /* отображаем текст при наведении */
+}
+
+.image-overlay p {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+/* Медиа-запросы для адаптивности */
+
+@media (max-width: 1024px) {
+    .image-item {
+        width: calc(50% - 10px); /* 2 колонки на экранах среднего размера */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-item {
+        width: 100%; /* 1 колонка на узких экранах */
+    }
+}
+/*
+temuriylar shajarasi
+
+*/
+
+  
+.image-container {
+    display: flex;
+    justify-content: space-around; /* Выравнивание изображений по центру */
+    flex-wrap: wrap; /* Разрешает перенос строк */
+  }
+  
+  .image-wrapper {
+    position: relative;
+    margin-bottom: 20px; /* Пространство между изображениями */
+  }
+  
+  .image-wrapper img {
+    width: 100%; /* Изображение занимает всю доступную ширину */
+    height: auto; /* Сохраняет пропорции изображения */
+    display: block; /* Убирает пустое пространство под изображением */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон поверх изображения */
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0; /* По умолчанию невидимый текст */
+    transition: opacity 0.3s ease;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирует текст внутри overlay */
+  }
+  
+  .image-wrapper:hover .overlay {
+    opacity: 1; /* Показывает текст при наведении курсора */
+  }
+  /*
+  buyuk siymolar*/
+  .temuriylar-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.temuriylar-gallery-item {
+    position: relative;
+    margin: 10px;
+}
+
+.temuriylar-gallery-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.temuriylar-text-section {
+    display: none;
+    text-align: center;
+    margin: 50px;
+}
+
+.temuriylar-text-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.temuriylar-text-section p {
+    font-size: 1.2em;
+}
+
+/* Adaptivity */
+@media (max-width: 600px) {
+    .temuriylar-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .temuriylar-gallery-image {
+        width: 90%;
+        height: auto;
+    }
+}
+
+.temuriylar-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.temuriylar-gallery-item {
+    position: relative;
+    margin: 10px;
+}
+
+.temuriylar-gallery-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.temuriylar-gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.temuriylar-text-section {
+    display: none;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.temuriylar-text-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.temuriylar-text-section p {
+    font-size: 1.2em;
+}
+
+.new-image-container {
+    margin-bottom: 20px;
+}
+
+.new-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 1s ease-in-out;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Adaptivity */
+@media (max-width: 600px) {
+    .temuriylar-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .temuriylar-gallery-image {
+        width: 90%;
+        height: auto;
+    }
+}
+/*
+temuriylar shajarasi
+*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .item {
+    width: calc(33.33% - 10px); /* 3 колонки, с отступами между ними */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease; /* добавляем opacity для плавности */
+  }
+  
+  .item img {
+    width: 100%; /* Растягиваем изображение на ширину контейнера */
+    border-radius: 5px;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px); /* Поднимаем немного при наведении */
+    cursor: pointer;
+  }
+  
+  /* Стили для фильтра */
+  .filter {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .filter-button {
+    cursor: pointer;
+    padding: 8px 16px;
+    margin-right: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #334c67;
+    font-family: fantasy;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: #666f79;
+    color: #000;
+  }
+  
+  .hidden {
+    display: none; /* Скрываем элементы с помощью класса hidden */
+  }
+  .info {
+    /* Ваши текущие стили для информации */
+    display: none; /* Скрываем информацию по умолчанию */
+  }
+  
+  .info.hidden {
+    display: block; /* Показываем информацию при активации */
+  }
+  .c{
+    text-align: center;
+    margin-top: 30px;
+    margin: 20px;
+    color: #fff;
+    text-shadow: 20px 10px 30px rgb(118, 97, 97);
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .img{
+    width: 70%;
+    margin: 0 auto;
+
+  }
